@@ -7,4 +7,5 @@ Proyecto Visión de Ecualización de Histograma
 ### $$ v(i,j)= [Fu(u(i,j)-Fu(a))]/[1-Fu(a)][l-1]+0.5 $$
 ### El resultado de una ecualización ebería maximizar el contraste de una imagen sin perder información de tipo estructural. 
 ### En conclusión, nos sirven para: conviertir una imagen en un vector, 
-### que luego podemos combinar o aprovechar en aplicaciones como detección de rostros, clasificación de imágenes y localización de objetos.
+### que luego podemos combinar o aprovechar en aplicaciones como detección de rostros, clasificación de imágenes 
+### y localización de objetos.
