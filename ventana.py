@@ -4,7 +4,8 @@ import sys
 
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QFileDialog
+from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, QFileDialog,
+                             QHBoxLayout, QLabel, QWidget)
 
 
 # Instancia de la clase QApplication
@@ -12,14 +13,21 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QFileDialog
 class ventana(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.hola = None
-        self.ruta = None
-        self.image = None
         self.inicializar()
+        self.setWindowTitle('Ecualización de histrograma')
+        self.setMaximumSize(QSize(1080, 720))
+
 
     def inicializar(self):
-        self.hola = QPushButton('hola')
-        self.setCentralWidget(self.hola)
+        boton_hola = QPushButton('hola')
+        boton_hola.setFixedSize(QSize(100, 50))
+        boton_hola.clicked.connect(self.hola)
+        layout = QHBoxLayout()
+        layout.addWidget(boton_hola)
+        contenedor = QWidget()
+        contenedor.setLayout(layout)
+        self.setCentralWidget(contenedor)
+
         self.show()
 
     def hola(self):
